@@ -1,0 +1,37 @@
+@import "../_mixins";
+
+.footer {
+  position: relative;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  padding: 3em 12.5em;
+  background: linear-gradient(266.95deg, #06090E 35.08%, #000000 67.26%);
+
+  @include Mobile {
+    flex-direction: column;
+    gap: 3.75em;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5em;
+  }
+  &__society {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  @include DesktopLowResolution {
+    padding: 3em 6.25em;
+  }
+}

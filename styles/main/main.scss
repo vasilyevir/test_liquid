@@ -1,0 +1,612 @@
+@import "../_mixins";
+
+.first-block {
+  --height-header: 7.5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  svg {
+    width: 63.5em;
+
+    @include DesktopLowResolution {
+      width: 50em;
+    }
+
+    @include Tablet {
+      width: 40em;
+    }
+
+    @include Mobile {
+      width: 80%;
+
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  transition: right .5s;
+  display: flex;
+  &_open {
+    right: 0;
+  }
+  &__container {
+    padding: 2em 1.875em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    height: 100vh;
+    width: 20em;
+    background: linear-gradient(184.34deg, #000001 38.7%, #03060E 83.51%, #141D25 100%), #614CD4;
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 1.25rem;
+  }
+  &__button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    width: 100%;
+    margin: 2.375em 0 6.25em;
+  }
+  &__link{
+    font-size: 1rem;
+    &_big{
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+    } 
+  }
+}
+
+.event {
+  margin: 5em auto 0;
+  box-sizing: border-box;
+  background-image: url("../../images/bg-people.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120em;
+  @include DesktopLowResolution {
+    height: 80em;
+  }
+  @include Tablet {
+    height: 60em;
+  }
+  @include Mobile {
+    height: 40em;
+  }
+  &__header {
+    color: rgba(241, 206, 140, 1);
+    margin: 10vh auto;
+    text-transform: uppercase;
+    margin: 0;
+    font-style: normal;
+  }
+  &__text-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+  &__text {
+    font-family: 'Whyte';
+    font-style: normal;
+    margin: 0;
+    font-weight: 900;
+    font-size: 4.375rem;
+    line-height: 140%;
+    color: #FFFFFF;
+    opacity: 0.4;
+    
+    @include DesktopLowResolution {
+      font-size: 2.5em;
+    };
+  }
+}
+
+.event__clock {
+  color: #FFFFFF;
+  display: flex;
+  gap: 5.25em;
+  margin-top: 3.75em;
+  align-items: center;
+  
+  @include DesktopLowResolution {
+    gap: 3.75em;
+  }
+
+  @include Tablet {
+    gap: 2.5em;
+  }
+
+  @include Mobile {
+    gap: 1.25em;
+  }
+  &-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  &__header {
+    text-transform: uppercase;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25em;
+    width: 100%;
+    margin-top: 6.25em;
+
+    @include DesktopLowResolution {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include Mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__card {
+    background: linear-gradient(145.32deg, rgba(23, 23, 23, 0.4) 6.49%, rgba(255, 255, 255, 0.012) 59.28%, rgba(32, 32, 32, 0.144) 113.18%),
+radial-gradient(100% 100% at 0% 0%, rgba(94, 104, 113, 0.4) 0%, rgba(99, 99, 99, 0.16) 52.43%, rgba(50, 53, 56, 0.4) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border: 0.125em solid;
+    border-image-source: radial-gradient(100% 100% at 0% 0%, rgba(94, 104, 113, 0.4) 0%, rgba(99, 99, 99, 0.16) 52.43%, rgba(50, 53, 56, 0.4) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-radius: 3.125em;
+
+    width: 100%;
+    height: 30em;
+    display: flex;
+    object-fit: contain;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.125em;
+    justify-content: flex-end;
+    padding: 2.5em;
+    box-sizing: border-box;
+    overflow: hidden;
+    &-color {
+      background: #12A5D9;
+      filter: blur(4em); 
+      width: 100%;
+      height: 100%;
+      max-width: 14em;
+      max-height: 14em;
+      border-radius: 50%;
+    }
+    &-image {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+   
+      position: relative;
+      object-fit: contain;
+    }
+  }
+  &__description {
+    color: #B4B4B4;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    display: flex;
+  }
+  &__card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text {
+    font-family: 'Whyte';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
+}
+
+.announcement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 12.5em;
+  &__header {
+    text-transform: uppercase;
+  }
+
+  &__button {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 2em;
+    background: transparent;
+    border: none;
+    color: #B4B4B4;
+    transition: color 0.1s ease-in-out;
+    @include Tablet {
+      width: 9em;
+      height: 6em;
+    }
+
+    @include Mobile {
+      width: 8em;
+      height: 4em;
+    }
+    &:hover {
+      cursor: pointer;
+      color: rgba($color: #16D9E3, $alpha: 1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__title {
+    font-family: 'Whyte';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.875rem;
+    line-height: 140%;
+    color: #FFFFFF;
+    
+    @include Tablet {
+      font-size: 2rem;
+    }
+
+    @include Mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__description {
+    font-family: 'Whyte';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    text-overflow: ellipsis;
+    overflow: none;
+    margin-top: 1.4em;
+    overflow-wrap: break-word;
+    color: #FFFFFF;
+    width: 100%;
+    @include Tablet {
+      font-size: 1.5rem;
+    }
+
+    @include Mobile {
+      font-size: 1rem;
+    }
+
+    &-block {
+      margin-top: 2em;
+      height: 8.5em;
+      overflow: hidden;
+      transition: 350ms ease height;
+      &_open {
+        height: 33em;
+      }
+    }
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.who {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  margin-top: 12.5em;
+  &__text {
+    font-family: 'Whyte';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.875rem;
+    line-height: 140%;
+    margin-top: 6.25rem;
+    color: #FFFFFF;
+
+    @include DesktopLowResolution {
+      margin-top: 5rem;
+    }
+
+    @include Tablet {
+      font-size: 2rem;
+      margin-top: 5rem;
+    }
+
+    @include Mobile {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+    }
+  }
+  &__block {
+    max-width: 82.5em;
+  }
+  &__description {
+    margin-top: 1em;
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+@keyframes row {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -45.5rem;
+  }
+}
+
+@keyframes rowDesktopLowResolution {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -37.125rem;
+  }
+}
+@keyframes rowTablet {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -31.375rem;
+  }
+}
+
+@keyframes rowMobile {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -23.125rem;
+  }
+}
+
+.blockchain-life {
+  position: relative;
+  margin-top: 12.5em;
+  @include Tablet {
+    margin-top: 10em;
+  }
+  @include Mobile {
+    margin-top: 5em;
+  }
+  &__animation-section {
+    margin: 0 -12.5em;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+    @include DesktopLowResolution {
+      margin: 0 -6.25em;
+    }
+
+    @include Tablet {
+      margin: 0 -4.25em;
+    }
+
+    @include Mobile {
+      margin: 0 -1.25em;
+    }
+  }
+  
+  &__animation {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+    font-family: 'Whyte';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4.375rem;
+    line-height: 140%;
+    position: relative;
+    left: 0;
+    animation: 3s linear row infinite;
+    @include DesktopLowResolution {
+      animation: 3s linear rowDesktopLowResolution infinite;
+    }
+
+    @include Tablet {
+      animation: 3s linear rowTablet infinite;
+    }
+
+    @include Mobile {
+      animation: 3s linear rowMobile infinite;
+    }
+  }
+
+  &__image {
+    width: 51em;
+    margin-top: 6.25em;
+
+    @include Tablet {
+      width: 34.875em;
+    }
+
+    @include Mobile {
+      width: 16.75em;
+    }
+  }
+
+  &__description {
+    max-width: 62.125em; 
+    padding-top: 6.25rem;
+    @include DesktopLowResolution{
+      padding-top: 5em;
+    }
+
+    @include Mobile {
+      padding-top: 2.5em;
+    }
+
+    pre {
+      font-family: "Whyte", Arial, sans-serif;
+      margin: 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-rows: 9.5em 7.5em 9.5em 3.75em;
+    gap: 0 20px;
+
+    justify-content: space-between;
+
+    max-width: 55vw;
+    margin-top: 5em;
+    @include DesktopLowResolution {
+      grid-template-rows: unset;
+      gap: 2.5em;
+      
+      justify-content: unset;
+    }
+
+    @include Mobile {
+      margin: 2.5em auto 0;
+    }
+  }
+
+  &__card {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 30em;
+    &-image {
+      width: 9.375em;
+      height: 9.375em;
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+
+  .net {
+    grid-row: 1 / 3;
+  }
+
+  .liquid {
+    grid-row: 2 / 4;
+    margin-left: auto;
+  }
+
+  .coctail {
+    grid-row: 4 / 6;
+  }
+
+  .mind {
+    grid-row: 5 / 7;
+    margin-left: auto;
+  }
+
+  .net,.liquid,.coctail,.mind {
+    @include DesktopLowResolution {
+      grid-row: unset;
+    }
+  }
+
+
+  &__block {
+    max-width: 55vw;
+
+    @include Tablet {
+      max-width: unset;
+    }
+  }
+}
+
+.blockchain-life__text_white {
+  color: white;
+}
+
+.where {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 6.25em;
+  &__gradient {
+    margin-top: 6.25rem;
+    &_last {
+      margin-top: 2rem;
+    }
+  }
+}

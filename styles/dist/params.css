@@ -1,0 +1,36 @@
+.text-gradient {
+  background: -webkit-linear-gradient(90.04deg, #16D9E3 30.48%, #30C7EC 64.42%, #46AEF7 102.69%, #139AFA 102.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+.text-gradient_yellow {
+  color: #F1CE8C;
+}
+
+.block-gradient {
+  background: linear-gradient(170deg, transparent 0%, rgba(255, 255, 255, 0.15) 40%, transparent 80%, rgba(255, 255, 255, 0.1) 100%);
+  border: 4px solid #1b1b1b;
+  border-radius: 5.625em;
+  margin-top: 6.25em;
+  backdrop-filter: blur(3.5em);
+  padding: 3.125em 6.25em;
+}
+@media screen and (max-width: 1500px) {
+  .block-gradient {
+    padding: 3em;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .block-gradient {
+    border-radius: 2.5em;
+    margin-top: 5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block-gradient {
+    padding: 1.875em;
+    margin-top: 2.5em;
+    border-radius: 2.5em;
+  }
+}

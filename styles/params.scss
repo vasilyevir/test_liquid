@@ -1,0 +1,71 @@
+@import "./_mixins.scss";
+
+.text-gradient {
+  background: -webkit-linear-gradient(90.04deg, #16D9E3 30.48%, #30C7EC 64.42%, #46AEF7 102.69%, #139AFA 102.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+
+  &_yellow {
+    color: #F1CE8C;
+  }
+}
+
+.block-gradient {
+  background: linear-gradient(170deg, transparent 0%, rgba(255, 255, 255, 0.15) 40%, transparent 80%, rgba(255, 255, 255, 0.1) 100%);
+  border: 4px solid #1b1b1b;
+  border-radius: 5.625em;
+
+  margin-top: 6.25em;
+  backdrop-filter: blur(3.5em);
+  padding: 3.125em 6.25em;
+
+  @include DesktopLowResolution {
+    padding: 3em;
+  }
+
+  @include Tablet {
+    border-radius: 2.5em;
+    margin-top: 5em;
+  }
+
+  @include Mobile {
+    padding: 1.875em;
+    margin-top: 2.5em;
+    border-radius: 2.5em;
+  }
+}
+
+$font-size-h1: 7.5rem;
+$font-size-timer: 6.25rem;
+$font-size-h2: 4.375rem;
+$font-size-h3: 2.875rem;
+$font-size-h4: 2rem;
+$font-size-h5: 1.5rem;
+$font-size-p: 1.25rem;
+
+
+$font-size-h1-1080: 4.375rem;
+$font-size-timer-1080: 4.375rem;
+$font-size-h2-1080: 3.5rem;
+$font-size-h3-1080: 2.875rem;
+$font-size-h4-1080: 2rem;
+$font-size-h5-1080: 1.5rem;
+$font-size-p-1080: 1.25rem;
+
+
+$font-size-h1-768: 3.5rem;
+$font-size-timer-768: 3.5rem;
+$font-size-h2-768: 2.875rem;
+$font-size-h3-768: 2rem;
+$font-size-h4-768: 1.5rem;
+$font-size-h5-768: 1.25rem;
+$font-size-p-768: 1.5rem;
+
+$font-size-h1-320: 1.5rem;
+$font-size-timer-320: 2.5rem;
+$font-size-h2-320: 2rem;
+$font-size-h3-320: 1.5rem;
+$font-size-h4-320: 1rem;
+$font-size-h5-320: 1.25rem;
+$font-size-p-320: 1.5rem;

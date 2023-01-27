@@ -1,0 +1,310 @@
+@import './header/header.scss';
+@import "./main/main.scss";
+@import "./footer/footer.scss";
+@import "./params.scss";
+@import "./_mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	margin: unset;
+
+  font: 16px/1 "Whyte", Arial, sans-serif;
+  color: white;
+  background-size: calc(100% + 4em);
+  background-repeat: no-repeat;
+  background-position: center -2em;
+  scroll-behavior: smooth;
+  @include Mobile {
+    background-size: 200vw;
+  }
+}
+
+.bg {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0; 
+  z-index: -1;
+  object-fit: cover;
+  object-position: top center;
+  &__people {
+    width: 100vw;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+}
+
+.main {
+  position: relative;
+  padding: 100vh 0 0;
+}
+
+a,button {
+  cursor: pointer;
+  
+  &:active {
+    opacity: 0.7;
+  }
+}
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(184.34deg, #000001 38.7%, #03060E 83.51%, #141D25 100%);
+  
+  padding: 0 12.5em 6.25em;
+
+  @include DesktopLowResolution {
+    padding: 0 6.25em 6.25em;
+
+  }
+
+  @include Tablet {
+    padding: 0 4.25em 6.25em;
+
+  }
+
+  @include Mobile {
+    padding: 0 1.25em 6.25em;
+
+  }
+}
+
+.burg {
+  position: absolute;
+  bottom: -25.25em;
+  right: -65em;
+  width: 150em;
+
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+
+  &__container {
+    height: 250em;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  @include DesktopLowResolution {
+    right: -70em;
+  }
+
+  @include Tablet {
+    bottom: -30.25em;
+    right: -76em;
+  }
+
+  @include Mobile {
+    display: none;
+  }
+
+  opacity: 1;
+  transition: opacity .5s linear;
+  &_hidden {
+    opacity: 0;
+  }
+}
+
+h1 {
+	font-size: $font-size-h1;
+  margin: 0;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-h1-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h1-768;
+  }
+
+  @include Mobile {
+    font-size: $font-size-h1-320;
+  }
+}
+
+.timer__data {
+  font-size: $font-size-timer;
+  margin: 0;
+  text-align: center;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-timer-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-timer-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-timer-320;
+  };
+}
+
+h2 {
+	font-size: $font-size-h2;
+	font-weight: 900;
+  margin: 0;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-h2-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h2-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-h2-320;
+  };
+}
+
+h3 {
+	font-size: $font-size-h3;
+  margin: 0;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-h3-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h3-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-h3-320;
+  };
+}
+
+.timer__header {
+	font-size: $font-size-h4;
+  margin: 0;
+  text-align: center;
+  
+  @include DesktopLowResolution {
+    font-size: $font-size-h4-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h4-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-h4-320;
+  };
+}
+
+h4 {
+	font-size: $font-size-h4;
+  margin: 0;
+  line-height: 140%;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-h4-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h4-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-h4-320;
+  };
+}
+
+h5 {
+	font-size: $font-size-h5;
+  margin: 0;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-h5-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h5-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-h5-320;
+  };
+}
+
+p {
+	font-size: $font-size-p;
+  margin: 0;
+	line-height: 1.25;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-p-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-p-768;
+  };
+
+  @include Mobile {
+    font-size: $font-size-p-320;
+  };
+}
+
+a {
+	font-size: $font-size-h5;
+  font-family: 400;
+  margin: 0;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-decoration: none;
+
+  @include DesktopLowResolution {
+    font-size: $font-size-h5-1080;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h5-768;
+  };
+
+  @include Tablet {
+    font-size: $font-size-h5-320;
+  };
+
+  &:after {
+    border-bottom: 1px solid #F1CE8C;
+    content: "";
+    border-radius: 2px;
+    margin: 0 auto;
+    display: block;
+    transition: width 250ms ease-in-out 0s;
+    width: 0;
+  }
+
+  &:hover:after {
+    transition: width 100ms ease-in-out 0s;
+    width: 100%;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.super {
+	font-weight: 900;
+}
+
+ul {
+  margin: unset;
+  padding: unset;
+  list-style: none;
+}

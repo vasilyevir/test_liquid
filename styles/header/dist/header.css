@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 1.5em 12.5em;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
+}
+@media screen and (max-width: 1500px) {
+  .header {
+    padding: 1.5em 6.25em;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .header {
+    padding: 1.5em 4.25em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1.5em 1.25em;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .header__logo {
+    width: 12.5em;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .header__logo {
+    width: 10.125em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    width: 9.875em;
+  }
+}
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6.25em;
+}
+@media screen and (max-width: 1500px) {
+  .header__list {
+    gap: 2.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__list {
+    display: none;
+  }
+}
+.header__link {
+  font-family: "Whyte";
+  font-size: 1.25rem;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+@media screen and (max-width: 1500px) {
+  .header__link {
+    font-size: 1rem;
+  }
+}
+.header__burger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__burger {
+    display: flex;
+    border: none;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

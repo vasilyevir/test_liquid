@@ -1,0 +1,84 @@
+@import "../_mixins.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 1.5em 12.5em;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: 100;
+
+  @include DesktopLowResolution {
+    padding: 1.5em 6.25em;
+  };
+  
+  @include Tablet {
+    padding: 1.5em 4.25em;
+  }
+
+  @include Mobile {
+    padding: 1.5em 1.25em;
+  }
+
+  &__logo {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    @include DesktopLowResolution {
+      width: 12.5em;
+    }
+
+    @include Tablet {
+      width: 10.125em;
+    }
+
+    @include Mobile {
+      width: 9.875em;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6.25em;
+    @include DesktopLowResolution {
+      gap: 2.5em;
+    };
+
+    @include Mobile {
+      display: none;
+    }
+  }
+  &__link {
+    font-family: 'Whyte';
+    font-size: 1.25rem;
+    line-height: 120%;
+    color: #FFFFFF;
+    text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    @include DesktopLowResolution {
+      font-size: 1rem;
+    };
+  }
+
+  &__burger {
+    display: none;
+    -webkit-backdrop-filter: blur(3px);
+
+    @include Mobile {
+      display: flex;
+      border: none;
+      background: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}

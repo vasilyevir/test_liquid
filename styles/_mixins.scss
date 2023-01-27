@@ -1,0 +1,22 @@
+$width-desktop: 1500px;
+$width-desktop-low-resolution: 1080px;
+$width-tablet: 768px;
+
+@mixin DesktopLowResolution {
+	@media screen and (max-width: #{$width-desktop}) {
+		@content;
+	}
+}
+
+@mixin Tablet {
+	@media screen and (max-width: #{$width-desktop-low-resolution}) {
+		@content;
+	}
+}
+
+
+@mixin Mobile {
+	@media screen and (max-width: #{$width-tablet}) {
+		@content;
+	}
+}

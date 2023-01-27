@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid</title>
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/dist/styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="./images/Logo.svg" class="header__logo" alt="Logo"/>
+    <ul class="header__list">
+      <li class="header__element">
+        <a href="#event" class="header__link">
+          Event
+        </a>
+      </li>
+      <li class="header__element">
+        <a href="#products" class="header__link">
+          Products
+        </a>
+      </li>
+      <li class="header__element">
+        <a href="#about-us" class="header__link">
+          About us
+        </a>
+      </li>
+      <li class="header__element">
+        <a href="#blockchain" class="header__link">
+          Blockchain
+        </a>
+      </li>
+    </ul>
+    <button class="header__burger" id="burger">
+      <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="2" rx="1" fill="#F1CE8C"/>
+        <rect x="5" y="8" width="25" height="2" rx="1" fill="#F1CE8C"/>
+        <rect x="10" y="16" width="20" height="2" rx="1" fill="#F1CE8C"/>
+      </svg>        
+    </button>
+  </header>
+  <img src="./images/bg.png" class="bg"/>
+  <main class="main">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar__container">
+        <div class="sidebar__header">
+          <h2 class="sidebar__title text-gradient_yellow regular">NAVIGATION</h2>
+          <button id="cross" class="sidebar__button">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="31.8196" height="2.12131" rx="1.06065" transform="matrix(0.707106 0.707108 -0.707106 0.707108 1.81421 0.686523)" fill="#F1CE8C"/>
+              <rect width="31.8196" height="2.12131" rx="1.06065" transform="matrix(0.707106 -0.707108 0.707106 0.707108 0.313721 23.1863)" fill="#F1CE8C"/>
+            </svg>            
+          </button>
+        </div>
+        <ul class="sidebar__list">
+          <li class="sidebar__element">
+            <a href="#event" class="sidebar__link">
+              Event
+            </a>
+          </li>
+          <li class="header__element">
+            <a href="#products" class="sidebar__link">
+              Products
+            </a>
+          </li>
+          <li class="header__element">
+            <a href="#about-us" class="sidebar__link">
+              About us
+            </a>
+          </li>
+          <li class="header__element">
+            <a href="#blockchain" class="sidebar__link">
+              Blockchain
+            </a>
+          </li>
+          <li>
+            <h5 class="text-gradient_yellow sidebar__link_big">Buy a ticket</h5>
+          </li>
+          <li>
+            <a href="#blockchain" class="sidebar__link">Blockchain Life</a>
+          </li>
+          <li>
+            <a href="#event" class="sidebar__link">Told you so</a>
+          </li>
+        </ul>
+        <div>
+          <img src="./images/logo-footer.svg"/>
+        </div>
+      </div> 
+    </div>
+    <section class="first-block">
+      <svg width="1024" height="130" viewBox="0 0 1024 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_2_161)">
+        <path d="M32.6861 74.0981H95.3599V110.789H4V0.292725H32.6861V74.0981Z" fill="#F1CE8C"/>
+        <path d="M201.577 110.789V0.292725H230.263V110.789H201.577Z" fill="#F1CE8C"/>
+        <path d="M459.249 90.8189L445.048 122C438.271 116.992 431.925 111.086 426.113 104.381C414.992 108.964 403.328 111.014 391.652 110.436C371.834 110.436 357.175 105.733 347.676 96.3286C338.178 86.9238 333.444 72.5139 333.475 53.0988C333.432 46.8875 334.315 40.7225 336.079 34.935C337.639 29.6756 340.042 24.8911 343.132 20.8883C346.282 17.0338 349.797 13.6981 353.594 10.9588C357.426 8.11127 361.531 5.91318 365.806 4.41983C370.029 2.89707 374.332 1.76399 378.682 1.02927C382.827 0.354848 387.001 0.0111012 391.179 0C394.871 0 398.516 -2.21942e-05 402.066 0.544891C405.917 0.958877 409.744 1.68691 413.522 2.72455C417.377 3.76936 421.16 5.2069 424.835 7.02335C428.447 8.79199 431.88 11.1093 435.06 13.9256C438.266 16.7056 441.137 20.0714 443.581 23.9156C445.997 28.1003 447.823 32.7924 448.977 37.7806C450.402 43.4737 451.105 49.422 451.06 55.3995C451.166 63.6959 449.958 71.9339 447.51 79.6179C451.141 83.8117 455.071 87.5617 459.249 90.8189ZM392.173 82.2819C399.278 82.9101 406.368 80.8013 412.528 76.2273C414.962 73.7966 416.877 70.6181 418.093 66.9873C419.31 63.3565 419.789 59.3913 419.486 55.4601C419.545 51.5174 418.915 47.6077 417.64 44.0169C416.545 40.9887 414.926 38.318 412.906 36.2064C410.928 34.2342 408.725 32.6619 406.374 31.5444C404.018 30.3962 401.575 29.5644 399.084 29.0621C396.713 28.6735 394.326 28.4713 391.936 28.4566C388.942 28.4504 385.957 28.877 383.037 29.7281C380.11 30.6092 377.28 31.9514 374.611 33.724C371.854 35.5847 369.558 38.3951 367.984 41.8373C366.243 45.6523 365.374 50.0154 365.475 54.4307C365.304 59.8772 366.303 65.2795 368.363 70.0516C370.416 74.2863 373.514 77.5247 377.167 79.2546C381.974 81.4704 387.066 82.4977 392.173 82.2819Z" fill="#F1CE8C"/>
+        <path d="M615.211 110.789C604.342 111.096 593.493 109.466 582.975 105.945C579.251 104.853 575.744 102.789 572.673 99.8823C569.602 96.9755 567.034 93.2887 565.129 89.053C562.563 82.0284 560.962 74.4914 560.395 66.7721C559.43 53.449 559.019 40.0697 559.165 26.6908V0.292725H589.46V49.6981C589.428 52.5114 589.554 55.324 589.839 58.114C590.141 60.9266 590.779 63.6631 591.732 66.2272C592.664 69.0769 594.127 71.5918 595.993 73.5532C598.258 75.8094 600.847 77.4755 603.614 78.4574C607.4 79.829 611.324 80.4819 615.259 80.395C619.162 80.4823 623.055 79.8294 626.809 78.4574C629.506 77.5135 632.02 75.8643 634.193 73.6138C635.955 71.6214 637.332 69.1346 638.217 66.3483C639.085 63.7575 639.674 61.0283 639.968 58.2351C640.214 55.4007 640.325 52.5497 640.3 49.6981V0.292725H670.595V26.6908C670.786 40.0677 670.407 53.448 669.459 66.7721C668.914 74.4965 667.312 82.0382 664.726 89.053C662.975 93.2988 660.46 96.9513 657.388 99.7091C653.923 102.773 650.06 105.028 645.98 106.369C641.33 108.011 636.579 109.146 631.779 109.76C626.276 110.498 620.745 110.842 615.211 110.789Z" fill="#F1CE8C"/>
+        <path d="M776.87 110.789V0.292725H805.557V110.789H776.87Z" fill="#F1CE8C"/>
+        <path d="M971.23 110.785H911.775V0.590834H970.899C975.868 0.534593 980.835 0.918987 985.763 1.74122C990.303 2.59451 994.741 4.18137 998.97 6.4638C1003.12 8.62132 1006.89 11.8346 1010.05 15.909C1013.3 20.5263 1015.75 25.9742 1017.24 31.8932C1019.19 39.5714 1020.12 47.6153 1019.99 55.6877C1020.04 63.1446 1019.03 70.5512 1017 77.5448C1015.34 83.4673 1012.69 88.8584 1009.24 93.3473C1005.94 97.5032 1002.11 100.921 997.928 103.458C993.767 106.043 989.359 107.916 984.816 109.029C980.341 110.166 975.792 110.754 971.23 110.785ZM969.289 80.5116C973.298 80.6711 977.272 79.5252 980.84 77.1815C983.819 75.1791 986.26 72.0784 987.845 68.2812C989.383 64.3802 990.147 60.0554 990.07 55.6877C990.308 49.0397 988.527 42.5316 985.1 37.5239C982.977 35.0476 980.477 33.1611 977.755 31.9835C975.034 30.8059 972.151 30.3628 969.289 30.6822H940.461V80.5721L969.289 80.5116Z" fill="#F1CE8C"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_2_161" x="0" y="0" width="1024" height="130" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_161"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_161" result="shape"/>
+        </filter>
+        </defs>
+      </svg>       
+      
+    </section>
+
+    <section class="event" id="event">
+      <h1 class="event__header super">TOLD YOU SO</h2>
+      <div class="event__clock">
+        <div class="event__clock-date">
+          <h3 class="timer__header super">DAYS</h3>
+          <p id="days" class="timer__data super"></p>
+        </div>
+        <div>
+          <h3 class="timer__header super">HOURS</h3>
+          <p class="timer__data super" id="hours"></p>
+        </div>
+        <div>
+          <h3 class="timer__header super">MINUTES</h3>
+          <p class="timer__data super" id="minutes"></p>
+        </div>
+        <div>
+          <h3 class="timer__header super">SECONDS</h3>
+          <p class="timer__data super" id="seconds"></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="background">
+      <section class="products" id="products">
+        <h2 class="products__header">
+          OUR
+          <span class="text-gradient">
+            PRODUCTS
+          </span>
+        </h2>
+        <div class="products__cards">
+          <div class="products__card">
+            <div class="products__card-image">
+              <div class="products__card-color"></div>
+              <img class="products__image" src="./images/Rigs/rig.png" alt="rig"/>
+            </div>
+            <p class="products__text">Rig</p>
+          </div>
+          <div class="products__card">
+            <div class="products__card-image">
+              <div class="products__card-color"></div>
+              <img class="products__image" src="./images/Rigs/gpu.png" alt="gpu"/>
+            </div>
+            <p class="products__text">GPU</p>
+          </div>
+          <div class="products__card">
+            <div class="products__card-image">
+              <div class="products__card-color"></div>
+              <img class="products__image" src="./images/Rigs/energy.png" alt="energy"/>
+            </div>
+            <p class="products__text">Energy</p>
+          </div>
+          <div class="products__card">
+            <div class="products__card-image">
+              <div class="products__card-color"></div>
+              <img class="products__image" src="./images/Rigs/asic.png" alt="Rig"/>
+            </div>
+            <div class="products__card-text">
+              <p class="products__description">Coming soon</p>
+              <p class="products__text">ASIC</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="announcement">
+        <h2 class="announcement__header">
+          «Told you so!» 
+          <span class="text-gradient">
+            event
+          </span>
+        </h2>
+
+        <div class="block-gradient announcement__block">
+          <h3 class="announcement__title">Get early access during  <span class="text-gradient">«Told you so!»</span> event!</h3>
+          <div class="announcement__description-block" id="content">
+            <p class="announcement__description">
+              The Event will take place on February 2023, from 21 to 22 in Dubai, at the awesome Coca Cola Arena.
+              Everyone is invited to join D.AI.SY. and the revolution of the biggest industries in the world, including
+              financial technology, A.I., blockchain, and of course the peer-to-peer economy.
+            </p>
+            <p class="announcement__description">
+              Told You So 2023 will be the moment that will launch D.AI.SY into a new future. Announcements, training, and inspiration participants will receive, will truly be life changing.
+            </p>
+            <p class="announcement__description">
+              As a community there is nothing more important, then coming together, united and ready to achieve dreams. Told You So 2023 is a chance to take life and business to the new level of success and freedom.
+            </p>
+            <p class="announcement__description">
+              Join us at the most important appointment to start a new project phase and first step to the bright future.
+            </p>
+          </div>
+          <button class="announcement__button" id="show-content">
+            
+          </button>
+        </div>
+      </section>
+
+      <section class="who" id="about-us">
+        <h2 class="products__header">
+          Who are
+          <span class="text-gradient">
+            we
+          </span>
+          ?
+        </h2>
+        <p class="who__text"><span class="text-gradient_yellow">Liquid Mining</span> is an advanced cloud mining ecosystem</p>
+        <div class="block-gradient who__block">
+          <h4 class="who__description regular">
+            The complex process of mining coins becomes available without wide skills of configuring hardware and software
+          </h4> 
+          <h4 class="who__description regular">
+            In the application, you will be able to assemble your own rig by purchasing components in the form of NFT (hashrate and the level of coin mining is confirmed at all stages of work). 
+          </h4>
+          <h4 class="who__description regular">
+            Liquid combines all the necessary elements that allow you to mine coins without much difficulty. 
+          </h4>
+          <h4 class="who__description regular">
+            Thanks to the multimining technology integrated into the application, users can mine both basic coins and promising startups.
+          </h4>
+        </div>
+      </section>
+
+      <section class="blockchain-life">
+        <div class="blockchain-life__animation-section">
+          <div class="blockchain-life__animation">
+            <h2 class="blockchain-life__text text-gradient">BLockchain</h2>
+            <h2 class="blockchain-life__text blockchain-life__text_white">LIFE</h2>
+            <h2 class="blockchain-life__text text-gradient">BLockchain</h2>
+            <h2 class="blockchain-life__text blockchain-life__text_white">LIFE</h2>
+            <h2 class="blockchain-life__text text-gradient">BLockchain</h2>
+            <h2 class="blockchain-life__text blockchain-life__text_white">LIFE</h2>
+            <h2 class="blockchain-life__text text-gradient">BLockchain</h2>
+            <h2 class="blockchain-life__text blockchain-life__text_white">LIFE</h2>
+            <h2 class="blockchain-life__text text-gradient">BLockchain</h2>
+            <h2 class="blockchain-life__text blockchain-life__text_white">LIFE</h2>
+            <h2 class="blockchain-life__text text-gradient">BLockchain</h2>
+            <h2 class="blockchain-life__text blockchain-life__text_white">LIFE</h2>
+          </div>
+        </div>      
+
+        <h3 class="blockchain-life__description bold" id="blockchain">
+          <p>We present our product <span class="text-gradient_yellow">Liquid NFT</span> 
+  - on the world's main stage of cryptoindustry
+          </p>
+        </h3>
+        <img src="./images/logo-blockchain.png" class="blockchain-life__image" alt="logo-blockchainlife">
+        <h3 class="blockchain-life__description bold">What to expect?</h3>
+
+        <div class="blockchain-life__grid">
+          <div class="blockchain-life__card net">
+            <img class="blockchain-life__card-image" src="./images/NETWorking.png">
+            <h4 class="blockchain-life__card-text regular">Networking attendees from all around the world</h4>
+          </div>
+          <div class="blockchain-life__card liquid">
+            <img class="blockchain-life__card-image" src="./images/LiquidRewards.png">
+            <h4 class="blockchain-life__card-text regular">Exhibition area with 100 booths of digital companies</h4>
+          </div>
+          <div class="blockchain-life__card coctail">
+            <img class="blockchain-life__card-image" src="./images/coctail.png">
+            <h4 class="blockchain-life__card-text regular">The greatest AfterParty on the luxury yacht “LOTUS”</h4>
+          </div>
+          <div  class="blockchain-life__card mind">
+            <img class="blockchain-life__card-image" src="./images/mind.png">
+            <h4 class="blockchain-life__card-text regular">Speeches by world-leading experts in the conference hall</h4>
+          </div>
+        </div>
+
+        <div class="block-gradient blockchain-life__block">
+          <h4 class="regular">
+            Newcomers to cryptocurrency will be able to take their first step in the Liquid Mining ecosystem, while professionals will greatly expand their business opportunities and discover new ways to increase their own capital. We look forward to seeing you at Blockchain Life 2023
+          </h4>
+        </div>
+      </section>
+    
+      <div class="burg__container">
+        <img class="burg" src="./images/tower0000.png"/>
+        <img class="burg burg_hidden" id="tower1" src="./images/tower0000.png"/>
+        <img class="burg burg_hidden" id="tower2" src="./images/tower0025.png"/>
+        <img class="burg burg_hidden" id="tower3" src="./images/tower0050.png"/>
+        <img class="burg burg_hidden" id="tower4" src="./images/tower0075.png"/>
+        <img class="burg burg_hidden" id="tower5" src="./images/tower0090.png"/>
+      </div>
+
+      <section class="where">
+        <h3>When and where?</h3>
+        <h2 class="where__gradient text-gradient super">February 27-28</h2>
+        <h2 class="where__gradient_last text-gradient super">Dubai, Atlantis the Palm</h2>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <img src="./images/logo-footer.svg" alt="logo"/>
+    <div>
+      <ul class="footer__links">
+        <li>
+          <h5 class="text-gradient_yellow">Buy a ticket</h5>
+        </li>
+        <li>
+          <a href="https://blockchain-life.com/asia/en/" target="_blank">Blockchain Life</a>
+        </li>
+        <li>
+          <a href="https://toldyouso2023.com" target="_blank">Told you so</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="footer__society">
+      <li>
+        <a>
+          <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.25 4.74473C46.4848 5.54653 44.5886 6.08828 42.5951 6.33316C44.652 5.0715 46.1909 3.0858 46.9245 0.746578C44.992 1.92325 42.877 2.75149 40.6714 3.19531C39.1882 1.57192 37.2236 0.495911 35.0827 0.134339C32.9418 -0.227233 30.7443 0.145862 28.8315 1.1957C26.9186 2.24554 25.3974 3.91338 24.504 5.94028C23.6106 7.96719 23.395 10.2398 23.8906 12.4051C19.9749 12.2036 16.1442 11.1603 12.6473 9.34294C9.15032 7.52558 6.06522 4.97478 3.5922 1.85609C2.74661 3.35134 2.26039 5.08495 2.26039 6.93125C2.25945 8.59335 2.65874 10.23 3.42283 11.696C4.18691 13.1619 5.29218 14.4119 6.64056 15.335C5.0768 15.284 3.54754 14.8508 2.18006 14.0716V14.2016C2.1799 16.5328 2.96653 18.7922 4.40647 20.5965C5.84641 22.4008 7.85096 23.6388 10.08 24.1006C8.62935 24.503 7.10846 24.5623 5.63219 24.2739C6.26109 26.2797 7.48614 28.0338 9.13583 29.2904C10.7855 30.5471 12.7773 31.2434 14.8322 31.2821C11.3438 34.0892 7.03563 35.612 2.60074 35.6053C1.81515 35.6055 1.03022 35.5584 0.25 35.4644C4.75167 38.4314 9.99193 40.0061 15.3438 40C33.4606 40 43.3646 24.6185 43.3646 11.2783C43.3646 10.8449 43.354 10.4072 43.335 9.97375C45.2615 8.54563 46.9243 6.77717 48.2458 4.75123L48.25 4.74473Z" fill="#F1CE8C"/>
+          </svg>            
+        </a>
+      </li>
+      <li>
+        <a>
+          <svg width="47" height="38" viewBox="0 0 47 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M43.6282 0.496571L2.65959 15.7701C-0.13635 16.8558 -0.120175 18.3637 2.14662 19.0361L12.6649 22.2083L37.0011 7.36372C38.1519 6.68684 39.2032 7.05097 38.339 7.79264L18.6219 24.9963H18.6172L18.6219 24.9985L17.8963 35.4802C18.9592 35.4802 19.4283 35.0088 20.0245 34.4526L25.1334 29.6496L35.7603 37.2383C37.7198 38.2815 39.127 37.7454 39.6145 35.4846L46.5905 3.70005C47.3045 0.932191 45.4976 -0.321053 43.6282 0.496571V0.496571Z" fill="#F1CE8C"/>
+          </svg>                      
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <template id="show-more">
+    <svg width="156" height="72" viewBox="0 0 156 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.84 14.68C1.608 17.392 4.008 19.336 7.656 19.336C11.64 19.336 13.872 17.248 13.872 14.272C13.872 11.752 12.024 10.12 9.048 9.472L6.744 8.968C4.896 8.56 4.08 7.864 4.08 6.52C4.08 5.056 5.28 4 7.32 4C9.312 4 10.656 4.96 11.352 6.856L13.608 5.824C13.032 3.976 11.064 1.864 7.536 1.864C4.008 1.864 1.68 3.88 1.68 6.64C1.68 9.352 3.264 10.72 6.072 11.32L8.304 11.824C10.416 12.28 11.352 13.048 11.352 14.488C11.352 16.12 10.08 17.176 7.8 17.176C5.304 17.176 3.84 15.76 3.144 13.624L0.84 14.68ZM19.8234 19V11.416H28.6314V19H31.0314V2.2H28.6314V9.208H19.8234V2.2H17.4234V19H19.8234ZM34.6219 10.6C34.5499 15.736 38.3179 19.408 43.0699 19.336C47.8459 19.408 51.5179 15.736 51.4459 10.6C51.5179 5.464 47.8459 1.792 43.0699 1.864C38.3179 1.792 34.5499 5.464 34.6219 10.6ZM48.9019 10.6C48.9019 14.416 46.6699 17.152 43.0459 17.152C39.4219 17.152 37.1899 14.416 37.1899 10.6C37.1899 6.856 39.4219 4.048 43.0459 4.048C46.6699 4.048 48.9019 6.856 48.9019 10.6ZM57.5132 19H60.6332L64.5692 5.176L68.2652 19H71.3372L75.6812 2.2H73.1612L70.9292 11.56C70.3292 14.056 69.9692 15.616 69.8012 16.216C69.6332 15.664 69.4172 14.872 69.1292 13.792L66.0572 2.2H63.1292L59.1692 16.216C59.0732 15.736 58.7372 14.248 58.1372 11.656L56.0252 2.2H53.5052L57.5132 19ZM83.9625 19H86.3625V4.648L92.0985 19H93.8025L99.4905 4.648V19H101.867V2.2H98.0505L94.2825 11.824L93.0105 14.992L87.8745 2.2H83.9625V19ZM105.473 10.6C105.401 15.736 109.169 19.408 113.921 19.336C118.697 19.408 122.369 15.736 122.297 10.6C122.369 5.464 118.697 1.792 113.921 1.864C109.169 1.792 105.401 5.464 105.473 10.6ZM119.753 10.6C119.753 14.416 117.521 17.152 113.897 17.152C110.273 17.152 108.041 14.416 108.041 10.6C108.041 6.856 110.273 4.048 113.897 4.048C117.521 4.048 119.753 6.856 119.753 10.6ZM128.316 19V12.064H131.796C134.1 12.064 135.156 12.856 135.516 14.992L136.212 19H138.828L138.012 14.776C137.556 12.664 136.74 11.632 134.508 11.248C136.812 10.792 138.516 9.304 138.516 6.76C138.516 4.168 136.548 2.2 133.092 2.2H125.916V19H128.316ZM132.732 4.408C134.748 4.408 135.996 5.32 135.996 7.144C135.996 8.968 134.748 9.904 132.732 9.904H128.316V4.408H132.732ZM154.366 19V16.792H144.886V11.392H151.918V9.208H144.886V4.408H154.366V2.2H142.486V19H154.366Z" fill="currentColor"/>
+      <path d="M59 49.778H65.8819L81.4409 65.8093H74.5591L59 49.778Z" fill="currentColor"/>
+      <path d="M97 49.778H90.1181L74.5591 65.8093H81.4409L97 49.778Z" fill="currentColor"/>
+      <path d="M77.9994 69.3547L74.5591 65.8093H81.4409L77.9994 69.3547Z" fill="currentColor"/>
+      <path d="M77.9994 69.3547L81.4409 65.8093H74.5591L77.9994 69.3547Z" fill="currentColor"/>
+      <path d="M59 35.0002H65.8819L81.4409 51.0315H74.5591L59 35.0002Z" fill="currentColor"/>
+      <path d="M97 35.0002H90.1181L74.5591 51.0315H81.4409L97 35.0002Z" fill="currentColor"/>
+      <path d="M77.9994 54.5769L74.5591 51.0315H81.4409L77.9994 54.5769Z" fill="currentColor"/>
+      <path d="M77.9994 54.5769L81.4409 51.0315H74.5591L77.9994 54.5769Z" fill="currentColor"/>
+    </svg> 
+  </template>
+  
+  <template id="hide">
+    <svg width="60" height="72" viewBox="0 0 60 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M49 22.222L42.1181 22.222L26.5591 6.19074L33.4409 6.19074L49 22.222Z" fill="currentColor"/>
+      <path d="M11 22.222L17.8819 22.222L33.4409 6.19074L26.5591 6.19074L11 22.222Z" fill="currentColor"/>
+      <path d="M30.0006 2.64534L33.4409 6.19074L26.5591 6.19074L30.0006 2.64534Z" fill="currentColor"/>
+      <path d="M30.0006 2.64534L26.5591 6.19074L33.4409 6.19074L30.0006 2.64534Z" fill="currentColor"/>
+      <path d="M49 36.9998L42.1181 36.9998L26.5591 20.9685L33.4409 20.9685L49 36.9998Z" fill="currentColor"/>
+      <path d="M11 36.9998L17.8819 36.9998L33.4409 20.9685L26.5591 20.9685L11 36.9998Z" fill="currentColor"/>
+      <path d="M30.0006 17.4231L33.4409 20.9685L26.5591 20.9685L30.0006 17.4231Z" fill="currentColor"/>
+      <path d="M30.0006 17.4231L26.5591 20.9685L33.4409 20.9685L30.0006 17.4231Z" fill="currentColor"/>
+      <path d="M5.3 67V59.416H14.108V67H16.508V50.2H14.108V57.208H5.3V50.2H2.9V67H5.3ZM21.2984 67H23.6984V50.2H21.2984V67ZM28.4938 67H34.2538C39.2698 67 42.4858 63.808 42.4858 58.528C42.4858 53.536 39.1978 50.2 34.3978 50.2H28.4938V67ZM30.8938 64.792V52.408H34.0618C37.9738 52.408 39.9658 54.808 39.9658 58.552C39.9658 62.704 37.9498 64.792 33.8938 64.792H30.8938ZM58.0222 67V64.792H48.5422V59.392H55.5742V57.208H48.5422V52.408H58.0222V50.2H46.1422V67H58.0222Z" fill="currentColor"/>
+      </svg>    
+  </template>
+  <script src="index.js"></script>
+</body>
+</html>
